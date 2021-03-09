@@ -17732,7 +17732,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "MainHeader"
+  name: "MainHeader",
+  data: function data() {
+    return {
+      DropDownIsOpen: false
+    };
+  },
+  methods: {
+    toggleDropDownMenu: function toggleDropDownMenu() {
+      this.DropDownIsOpen = !this.DropDownIsOpen;
+    }
+  }
 });
 
 /***/ }),
@@ -21564,33 +21574,70 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-646cade2");
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_1 = {
   "class": "bg-blue-300 py-2 px-4 flex justify-between items-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
+};
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
   "class": "text-2xl"
-}, "Glenn Meering"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("svg", {
-  xmlns: "http://www.w3.org/2000/svg",
-  fill: "none",
-  viewBox: "0 0 24 24",
-  stroke: "currentColor",
-  "class": "h-10 w-10"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("path", {
+}, "Glenn Meering", -1
+/* HOISTED */
+);
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("path", {
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2",
+  d: "M6 18L18 6M6 6l12 12"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("path", {
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2",
   d: "M4 6h16M4 12h16M4 18h16"
-})])], -1
+}, null, -1
 /* HOISTED */
 );
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, null, -1
-/* HOISTED */
-);
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<ul data-v-646cade2><li data-v-646cade2><a href=\"#\" data-v-646cade2>Home</a></li><li data-v-646cade2><a href=\"#\" data-v-646cade2>About Me</a></li><li data-v-646cade2><a href=\"#\" data-v-646cade2>Skills</a></li><li data-v-646cade2><a href=\"#\" data-v-646cade2>Projects</a></li><li data-v-646cade2><a href=\"#\" data-v-646cade2>Education</a></li><li data-v-646cade2><a href=\"#\" data-v-646cade2>Contact Me</a></li><li data-v-646cade2><a href=\"#\" data-v-646cade2>Other</a></li></ul>", 1);
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("header", null, [_hoisted_1, _hoisted_2]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("header", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [_hoisted_2, $data.DropDownIsOpen ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("svg", {
+    key: 0,
+    onClick: _cache[1] || (_cache[1] = function () {
+      return $options.toggleDropDownMenu && $options.toggleDropDownMenu.apply($options, arguments);
+    }),
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    stroke: "currentColor",
+    "class": "h-10 w-10 z-10 p-1 bg-white rounded"
+  }, [_hoisted_3])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("svg", {
+    key: 1,
+    onClick: _cache[2] || (_cache[2] = function () {
+      return $options.toggleDropDownMenu && $options.toggleDropDownMenu.apply($options, arguments);
+    }),
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    stroke: "currentColor",
+    "class": "h-10 w-10"
+  }, [_hoisted_4]))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [$data.DropDownIsOpen ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", {
+    key: 0,
+    onClick: _cache[3] || (_cache[3] = function () {
+      return $options.toggleDropDownMenu && $options.toggleDropDownMenu.apply($options, arguments);
+    }),
+    "class": "w-screen h-screen bg-black bg-opacity-25 absolute top-0 left-0"
+  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+    "class": ["absolute top-0 w-96 bg-gray-800 h-screen text-white text-2xl z-10 transition duration-150 ease-in-out", $data.DropDownIsOpen ? 'left-0' : '-left-96']
+  }, [_hoisted_5], 2
+  /* CLASS */
+  )])]);
 });
 
 /***/ }),
